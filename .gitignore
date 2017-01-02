@@ -31,3 +31,6 @@ bower_components/
 
 # IDE/Editor data
 .idea
+
+# macOS Serria finder data
+*.DS_Store
