@@ -4,6 +4,12 @@ require('styles/App.scss');
 import React from 'react';
 import ReactDom from 'react-dom';
 
+
+// import Rest from 'fetch-on-rest';
+// let api = new Rest('https://rap.dev.iquantex.com/RAP/mockjs/3/api/chartsetting');
+// api.get(['chart','1477637259081']).then(function(response) {
+//   console.log('response', response)
+// });
 // 获取图片数据相关数组
 let imageDatas = require('../sources/imageDatas.json');
 
