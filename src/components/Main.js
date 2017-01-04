@@ -1,23 +1,24 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import Rest from 'fetch-on-rest';
+
 require('normalize.css/normalize.css');
 require('styles/App.scss');
 
-import React from 'react';
-import ReactDom from 'react-dom';
+  let api= new Rest('https://rap.dev.iquantex.com/RAP/mockjs/3/api/chartsetting');
 
-
-// import Rest from 'fetch-on-rest';
-// let api = new Rest('https://rap.dev.iquantex.com/RAP/mockjs/3/api/chartsetting');
-// api.get(['chart','1477637259081']).then(function(response) {
-//   console.log('response', response)
-// });
+api.get(['chart','1477637259081']).then(function(response) {
+    console.log('response', response);
+});
 // 获取图片数据相关数组
-let imageDatas = require('../sources/imageDatas.json');
+let imageDatas =require('../sources/imageDatas.json');
 
 // 从给定范围随机返回一个值
 let getRangeRandom = (low, high) => Math.floor(Math.random() * (high - low) + low);
 // 从 -30deg ~ 30deg 随机返回一个值
 let getRangeDeg = () => {
-  let deg = (Math.random() > 0.5) ? '+' : '-';
+  debugger
+  let deg = (Math.random()> 0.5) ? '+' : '-';
   return deg + Math.ceil(Math.random() * 30);
 };
 
