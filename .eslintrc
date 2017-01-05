@@ -3,6 +3,10 @@
   "plugins": [
     "react"
   ],
+  "settings": {
+    // 解决webpack require各类文件报路径错误
+    "import/resolver": "webpack"
+  },
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -10,18 +14,28 @@
       "jsx": true
     }
   },
+  // 脚本运行环境,会决定存在哪些全局变量,比如brower会有window
   "env": {
+    "browser": true,
     "amd": true,
     "es6": true,
     "node": true,
     "mocha": true
   },
+  // 使用airbnb定义的规则集
   "extends": "airbnb-base",
+  // 使用自定义规则进行覆盖
   "rules": {
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
 
     "no-mixed-operators": 0,
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "no-plusplus": 0,
+    "import/no-dynamic-require": 0,
+    "prefer-template": 0,
+    "prefer-const": 0,
+    "object-shorthand": 0,
+    "global-require": 0
   }
 }
