@@ -6,6 +6,9 @@ import App from './components/Main';
 import About from './components/About';
 import Repos from './components/Repos';
 
+// test htmlhint
+require('./templates/test_rules.html');
+
 // 使用路由时请用webpack-dev-server内联模式调试,即浏览器直接打开localhost:port
 // path="/" => localhost:port/#/
 // path="/about" => localhost:port/#/about

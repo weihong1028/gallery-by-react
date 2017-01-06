@@ -14,6 +14,9 @@ module.exports = {
   port: defaultSettings.port,
   debug: true,
   devtool: 'eval',
+  htmlhint: {
+    configFile: './.htmlhintrc'
+  },
   output: {
     path: path.join(__dirname, '/../dist/assets'),
     filename: 'app.js',
@@ -35,6 +38,7 @@ module.exports = {
       sources: `${defaultSettings.srcPath}/sources/`,
       stores: `${defaultSettings.srcPath}/stores/`,
       styles: `${defaultSettings.srcPath}/styles/`,
+      templates: `${defaultSettings.srcPath}/templates/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
       'react/lib/ReactMount': 'react-dom/lib/ReactMount'
     }
