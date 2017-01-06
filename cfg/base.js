@@ -1,6 +1,7 @@
 'use strict';
 let path = require('path');
 let defaultSettings = require('./defaults');
+let autoPrefixer = require('autoprefixer');
 
 // Additional npm or bower modules to include in builds
 // Add all foreign plugins you may need into this array
@@ -17,6 +18,9 @@ module.exports = {
   htmlhint: {
     configFile: './.htmlhintrc'
   },
+  postcss: [
+    autoPrefixer()
+  ],
   output: {
     path: path.join(__dirname, '/../dist/assets'),
     filename: 'app.js',

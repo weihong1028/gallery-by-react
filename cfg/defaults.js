@@ -31,23 +31,23 @@ function getDefaultModules() {
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!csslint'
+        loader: 'style-loader!css-loader!postcss-loader!csslint'
       },
       {
         test: /\.sass/,
-        loader: 'style-loader!css-loader!csslint!sass-loader?outputStyle=expanded&indentedSyntax'
+        loader: 'style-loader!css-loader!postcss-loader!csslint!sass-loader?outputStyle=expanded&indentedSyntax'
       },
       {
         test: /\.scss/,
-        loader: 'style-loader!css-loader!csslint!sass-loader?outputStyle=expanded'
+        loader: 'style-loader!css-loader!postcss-loader!csslint!sass-loader?outputStyle=expanded'
       },
       {
         test: /\.less/,
-        loader: 'style-loader!css-loader!csslint!less-loader'
+        loader: 'style-loader!css-loader!postcss-loader!csslint!less-loader'
       },
       {
         test: /\.styl/,
-        loader: 'style-loader!css-loader!csslint!stylus-loader'
+        loader: 'style-loader!css-loader!postcss-loader!csslint!stylus-loader'
       },
       {
         test: /\.html$/,
